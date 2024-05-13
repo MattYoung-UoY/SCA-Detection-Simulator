@@ -1,6 +1,6 @@
 from typing import Callable
 
-def generateSamples(probDistPattern: list[tuple[Callable[[float], int], int]]):
+def generate_dataset(probDistPattern: list[tuple[Callable[[float], int], int]]):
     result = []
 
     totalSamples = 0

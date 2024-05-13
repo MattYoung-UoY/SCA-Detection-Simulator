@@ -1,10 +1,10 @@
 import random
 
-def const0(t:float):
+def const_0(t:float):
     return 0
 
-def const1(t:float):
+def const_1(t:float):
     return 1
 
-def equalProb(t:float):
+def uniform_dist(t:float):
     return random.randint(0, 1)
