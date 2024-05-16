@@ -1,8 +1,8 @@
-import datasetGenerator
-from distributions import *
-from tests import *
-from utils import *
-from convolutions import *
+from sim.datasetGenerator import *
+from sim.distributions import *
+from sim.tests import *
+from sim.utils import *
+from sim.convolutions import *
 
 import matplotlib.pyplot as plt
 
@@ -23,7 +23,7 @@ prob_dist_pattern = [
     (uniform_dist, int(num_samples*2))
     ]
 
-dataset = datasetGenerator.generate_dataset(prob_dist_pattern);
+dataset = generate_dataset(prob_dist_pattern);
 
 # TODO
 # Collect a list of est_mean values and post-process on that list, and can also plot it

@@ -1,4 +1,4 @@
-from tests import *
+from sim.tests import *
 
 # TODO Could replace this with a list comprehension and move sample_mean here, as 'convolutions' better describes that function
 def est_mean(dataset, num_samples):
