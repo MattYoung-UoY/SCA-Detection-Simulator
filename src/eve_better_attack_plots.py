@@ -15,12 +15,17 @@ epsilon = 0.001
 num_samples = chernoff_hoeffding_bound(delta_p, epsilon)
 print(num_samples)
 
+switching_size = 0.5
+
 prob_dist_pattern = [
     # (const_0, 5), 
     # (const_1, 5), 
-    (uniform_dist, int(num_samples*1.05)),
-    (quarter_mean, int(num_samples*1.05)),
-    (uniform_dist, int(num_samples*1.05))
+    (quarter_mean, int(num_samples*switching_size)),
+    (three_quarter_mean, int(num_samples*switching_size)),
+    (quarter_mean, int(num_samples*switching_size)),
+    (three_quarter_mean, int(num_samples*switching_size)),
+    (quarter_mean, int(num_samples*switching_size)),
+    (three_quarter_mean, int(num_samples*switching_size))
     ]
 
 dataset = generate_dataset(prob_dist_pattern);
