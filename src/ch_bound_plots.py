@@ -16,3 +16,19 @@ ax.plot_surface(X, Y, np.array(log_10_sample_vals), cmap='viridis', edgecolor='n
 ax.set_xlabel("delta_p")
 ax.set_ylabel("epsilon")
 plt.show()
+
+#Contour plot
+
+delta_p_vals = np.linspace(0.01, 0.2, 20)
+epsilon_vals_contour = [0.001, 0.01, 0.1, 1]
+num_samples_contour = [[math.log10(chernoff_hoeffding_bound(delta, eps)) for delta in delta_p_vals] for eps in epsilon_vals_contour]
+markers = [".", "D", "x", "s"]
+
+for i in range(len(epsilon_vals_contour)):
+    plt.plot(delta_p_vals, num_samples_contour[i], label=str(epsilon_vals_contour[i]), marker=markers[i])
+
+plt.legend(loc="upper right")
+plt.xlabel("delta_mu")
+plt.ylabel("log(n) (log(bits))")
+plt.grid()
+plt.show()
