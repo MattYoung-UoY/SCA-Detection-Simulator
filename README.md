@@ -6,6 +6,7 @@ This code was used to produce the figures for \*insert paper reference\* (\*inse
 
 - NumPy
 - MatPlotLib
+- SciPy
 
 ## Code Examples
 
