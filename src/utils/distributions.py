@@ -1,3 +1,15 @@
+"""Licensed under the MIT License.
+Full license can be found in the "LICENSE" file in the repository root directory.
+
+Copyright (c) 2024 Matt Young
+
+Specifies probability distributions that can be used to generate datasets.
+
+Each function takes a time value such that they can evolve over time if they require eg. sinusoidal, square wave, triangluar.
+This feature is not yet used.
+Each function returns a tuple of the expectation value and randomly generated value respectively.
+"""
+
 import random
 
 def const_0(t:float):

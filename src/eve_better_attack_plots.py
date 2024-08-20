@@ -1,8 +1,7 @@
-from sim.datasetGenerator import *
-from sim.distributions import *
-from sim.tests import *
-from sim.utils import *
-from sim.convolutions import *
+from utils.datasetGenerator import *
+from utils.distributions import *
+from utils.bounds import *
+from utils.convolutions import *
 
 import matplotlib.pyplot as plt
 from matplotlib.transforms import ScaledTranslation
@@ -45,10 +44,10 @@ num_bits = num_samples * 3
 switching_frequency_1 = 1
 prob_dist_pattern_1 = get_prob_dist_pattern(switching_frequency_1, num_samples, num_bits)
 dataset_1 = generate_dataset(prob_dist_pattern_1);
-est_mean_1 = est_mean(dataset_1[1], num_samples)
+est_mean_1 = ([None] * num_samples) + est_mean(dataset_1[1], num_samples)
 total_samples_1 = sum([x[1] for x in prob_dist_pattern_1])
 
-rel_x_vals_est_mean = [x/num_samples for x in range(0, total_samples_1-num_samples)]
+rel_x_vals_est_mean = [x/num_samples for x in range(0, total_samples_1)]
 rel_x_vals_samples = [x/num_samples for x in range(0, total_samples_1)]
 
 fig, axs = plt.subplot_mosaic([['a)', 'b)'], ['c)', 'd)']],
@@ -75,9 +74,9 @@ plt.subplot(2, 2, 3)
 plt.xlabel("Sliding Window End Position (Relative to Window Size)")
 plt.ylabel("Sample Mean")
 plt.plot(rel_x_vals_est_mean, est_mean_1)
-plt.plot([0, (total_samples_1/num_samples)-1], [0.5, 0.5], linestyle='dashed', color='blue')
-plt.plot([0, (total_samples_1/num_samples)-1], [0.5+delta_p, 0.5+delta_p], linestyle='dashed', color='red')
-plt.plot([0, (total_samples_1/num_samples)-1], [0.5-delta_p, 0.5-delta_p], linestyle='dashed', color='red')
+plt.plot([0, (total_samples_1/num_samples)], [0.5, 0.5], linestyle='dashed', color='blue')
+plt.plot([0, (total_samples_1/num_samples)], [0.5+delta_p, 0.5+delta_p], linestyle='dashed', color='red')
+plt.plot([0, (total_samples_1/num_samples)], [0.5-delta_p, 0.5-delta_p], linestyle='dashed', color='red')
 plt.grid()
 
 # Calculation and plotting for the second frequency
@@ -85,10 +84,10 @@ plt.grid()
 switching_frequency_2 = 1.5
 prob_dist_pattern_2 = get_prob_dist_pattern(switching_frequency_2, num_samples, num_bits)
 dataset_2 = generate_dataset(prob_dist_pattern_2);
-est_mean_2 = est_mean(dataset_2[1], num_samples)
+est_mean_2 = ([None] * num_samples) + est_mean(dataset_2[1], num_samples)
 total_samples_2 = sum([x[1] for x in prob_dist_pattern_2])
 
-rel_x_vals_est_mean = [x/num_samples for x in range(0, total_samples_1-num_samples)]
+rel_x_vals_est_mean = [x/num_samples for x in range(0, total_samples_1)]
 rel_x_vals_samples = [x/num_samples for x in range(0, total_samples_1)]
 
 plt.subplot(2, 2, 2)
@@ -101,9 +100,9 @@ plt.subplot(2, 2, 4)
 plt.xlabel("Sliding Window End Position (Relative to Window Size)")
 plt.ylabel("Sample Mean")
 plt.plot(rel_x_vals_est_mean, est_mean_2)
-plt.plot([0, (total_samples_2/num_samples)-1], [0.5, 0.5], linestyle='dashed', color='blue')
-plt.plot([0, (total_samples_2/num_samples)-1], [0.5+delta_p, 0.5+delta_p], linestyle='dashed', color='red')
-plt.plot([0, (total_samples_2/num_samples)-1], [0.5-delta_p, 0.5-delta_p], linestyle='dashed', color='red')
+plt.plot([0, (total_samples_2/num_samples)], [0.5, 0.5], linestyle='dashed', color='blue')
+plt.plot([0, (total_samples_2/num_samples)], [0.5+delta_p, 0.5+delta_p], linestyle='dashed', color='red')
+plt.plot([0, (total_samples_2/num_samples)], [0.5-delta_p, 0.5-delta_p], linestyle='dashed', color='red')
 plt.grid()
 
 plt.show()
