@@ -36,7 +36,7 @@ key_bit_dist_pattern = [
     ]
 
 # Generates random key bits using the specified distribution pattern
-dataset = generate_dataset(key_bit_dist_pattern);
+dataset = generate_dataset(key_bit_dist_pattern)
 
 mean_est = est_mean(dataset[1], window_size)
 

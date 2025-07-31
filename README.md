@@ -16,6 +16,6 @@ Where code is used to produce figures from the paper (\*insert paper DOI\*) this
 - utility modules in the "utils" folder
 - ch_bound_plots.py &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;- Figure 1
 - state_blocking_attack.py &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;- Figure 2
-- blocked_detect_time_plots_take_2.py
+- detection_time_sims.py &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;- Figure 3
 - results_processing.py &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;- Figure 3
-- eve_better_attack_plots.py &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;- Figure 4
+- strengthened_attack.py &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;- Figure 4
