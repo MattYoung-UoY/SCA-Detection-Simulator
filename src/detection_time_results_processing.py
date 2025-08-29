@@ -71,7 +71,8 @@ plt.subplot(2, 1, 1)
 plt.scatter(num_samples, mean_det_pos, marker='x', color='orange')
 plt.plot(num_samples, mean_det_pos_reg, linestyle='dashed', color='blue')
 plt.xlabel("sliding window size")
-plt.ylabel("average attack detection position (bits)")
+plt.xticks([10, 10000, 20000, 30000, 40000, 50000])
+plt.ylabel("mean fault detection position (bits)")
 plt.grid()
 
 # Plots the standard deviation and the regression model
@@ -79,6 +80,7 @@ plt.subplot(2, 1, 2)
 plt.scatter(num_samples, std_devs, marker='x', color='orange')
 plt.plot(num_samples, std_dev_reg, linestyle='dashed', color='blue')
 plt.xlabel("sliding window size")
+plt.xticks([10, 10000, 20000, 30000, 40000, 50000])
 plt.ylabel("standard deviation (bits)")
 plt.grid()
 
