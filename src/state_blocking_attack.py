@@ -3,12 +3,12 @@ Full license can be found in the "LICENSE" file in the repository root directory
 
 Copyright (c) 2024 Matt Young
 
-Used to generate Fig.2 from *insert paper DOI*
+Used to generate Fig.2 from arxiv.2305.18006
 
 A simple proof of concept simulation of one instance of a state-blocking side-channel attack against a QKD system.
 """
 
-from utils.datasetGenerator import *
+from utils.dataset_generator import *
 from utils.distributions import *
 from utils.bounds import *
 from utils.convolutions import *

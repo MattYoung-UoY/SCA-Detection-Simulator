@@ -1,6 +1,6 @@
 # SCA-Detection-Simulator
 Code to simulate detection of state-blocking side-channel attacks in QKD setups.
-This code was used to produce the figures for \*insert paper reference\* (\*insert paper DOI\*).
+This code was used to produce the figures for arxiv.2305.18006
 
 ## Dependencies
 
@@ -11,7 +11,7 @@ This code was used to produce the figures for \*insert paper reference\* (\*inse
 ## Code Examples
 
 It is worth exploring the code in the following order.
-Where code is used to produce figures from the paper (\*insert paper DOI\*) this has been noted.
+Where code is used to produce figures from the paper (arxiv.2305.18006) this has been noted.
 
 - utility modules in the "utils" folder
 - ch_bound_plots.py &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;- Figure 1

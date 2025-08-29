@@ -3,7 +3,7 @@ Full license can be found in the "LICENSE" file in the repository root directory
 
 Copyright (c) 2024 Matt Young
 
-Used to generate Fig.3 from *insert paper DOI*
+Used to generate Fig.3 from arxiv.2305.18006
 
 Processes the results that are saved to file by detection_time_sims.py
 """

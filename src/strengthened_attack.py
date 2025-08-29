@@ -3,13 +3,13 @@ Full license can be found in the "LICENSE" file in the repository root directory
 
 Copyright (c) 2024 Matt Young
 
-Used to generate Fig.4 from *insert paper DOI*
+Used to generate Fig.4 from arxiv.2305.18006
 
 Simulates an attack where the attacker switches which state they are blocking with a certain frequency.
 Two different attack frequencies are simulated here for the same sampling window width.
 """
 
-from utils.datasetGenerator import *
+from utils.dataset_generator import *
 from utils.distributions import *
 from utils.bounds import *
 from utils.convolutions import *

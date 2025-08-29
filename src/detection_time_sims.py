@@ -3,13 +3,13 @@ Full license can be found in the "LICENSE" file in the repository root directory
 
 Copyright (c) 2024 Matt Young
 
-Used to generate Fig.3 from *insert paper DOI*
+Used to generate Fig.3 from arxiv.2305.18006
 
 Runs many simulations for a variety of window sizes and finds the first instance of a detection of an attack.
 Each simulation is refered to as a trial in the code.
 """
 
-from utils.datasetGenerator import *
+from utils.dataset_generator import *
 from utils.distributions import *
 from utils.convolutions import *
 from utils.bounds import *
